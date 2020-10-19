@@ -1,0 +1,265 @@
+body {
+    margin: 0 auto;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    width: 98vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* header < */
+header {
+    margin: 0 auto;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9BD2DE;
+}
+
+#navPrincipal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    font-family: 'Roboto', sans-serif;
+}
+
+#navbar {
+display: flex;
+list-style: none;
+justify-content: space-between;
+width: 250px;
+font-size: 20px;
+font-family: 'Roboto', sans-serif;
+}
+/* header > */
+/* main < */
+#logoSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+#logoSection h1 {
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#logoSection img {
+    width: 25%;  
+}
+
+/* resultados de busca < */
+#container {
+    display: flex;
+    width: 1200px;
+    justify-content: flex-start;
+}
+#resultadoBusca {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#titulos-e-generos {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+#resultadoBusca h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+#resultadoBusca p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.card-filme {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* resultados de busca > */
+
+#Botao {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.btn-listarFilme {
+    background-color: #F6511D;
+    width: 9vw;
+    height: 8vh;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    margin: 30px 0px 30px 0px;
+}
+
+/* main > */
+
+/* footer < */
+footer {
+    margin: auto;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    background-color: #F6511D;
+    
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+footer nav li {
+    list-style: none;
+}
+
+footer nav img {
+    object-fit: none;
+}
+
+.divisor {
+    height: 80%;
+    border: white 1px solid;
+    
+}
+
+#footerContact {
+color: white;
+font-family: 'Roboto', sans-serif;
+font-size: 16px ;
+line-height: 1.8;
+
+}
+
+@media (max-width: 1400px){
+    #footerContact{
+        padding: 0 0 0 80px;
+    }
+    footer{
+        height: 300px;
+    }
+    .iconeFooter{
+        padding: 0 60px 0 0;
+    }
+}
+
+@media (max-width: 1300px){
+    #footerContact{
+        padding: 0 0 0 80px;
+    }
+    footer{
+        height: 300px;
+    }
+    .iconeFooter{
+        padding: 0 40px 0 0;
+    }
+}
+
+@media (max-width: 1200px){
+    #footerContact{
+        padding: 0 0 0 80px;
+    }
+
+    .iconeFooter{
+        padding: 0 40px 0 0;
+    }
+
+    #container h2 #resultadoBusca{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:900px){
+    #footerContact{
+        padding: 0 0 0 80px;
+    }
+
+    #resultadoBusca{
+        padding: 0 0 0 30px;
+        font-size: 22px;
+    }
+    .iconeFooter{
+        width: 200px;
+        height: 60px;
+        padding: 0 80px 0 0;
+    }
+
+    footer{
+        height: 300px;
+    }
+}
+
+
+@media (max-width: 600px){
+    .filmesColection{
+        width: 100px;
+        height: 40px;
+    }
+
+    #navbar li{
+        font-size: 14px;
+    }
+
+    .iconeRolo{
+        width: 35px;
+        height: 80px;
+    }
+
+    .tituloFilme{
+        font-size: 10px;
+    }
+
+    #resultadoBusca{
+        font-size: 14px;
+    }
+
+    #Botao{
+        padding: 50px;
+    }
+
+    .btn-listarFilme{
+        font-size: 12px;
+    }
+
+    #footerContact{
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .iconeFooter{
+        width: 200px;
+        height: 60px;
+        display: flex;
+        align-items: flex-start;
+        padding: 0 40px 0 0;
+    }
+}
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <header>
+            <nav id="navPrincipal">
+                <img class="filmesColection" src="resources/logo.png" alt="">
+                <ul id="navbar">
+                    <li>Perfil</li>
+                    <li>Filmes</li>
+                    <li>Gênero</li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="logoSection">
+                <h1 class="tituloFilme">Filmes</h1>
+                <img class="iconeRolo" src="resources/cinema.png" alt="Botão de Play e o texto Filmes Collection">
+            </section>
+
+            <div id="container">
+                <section id="resultadoBusca">
+                    <h2>Lista de Filmes</h2>
+                    <div id="titulos-e-generos"></div>
+                </section>
+            </div>
+
+            <div id="Botao">
+                <button onclick="buscarDado()" class="btn-listarFilme" type="submit">
+                    Listar Filmes</button>
+            </div>
+
+        </main>
+
+        <footer>
+            <nav id="navFooter">
+                <li></li>
+                <li></li>
+                <li></li>
+
+                <img src="resources/logonegativo.png" class="iconeFooter" alt="Botão de Play e o texto Filmes Collection em Negativo">
+
+                <div class="divisor"></div>
+
+                <p id="footerContact">
+
+                    Company Inc., 8901 Marmora Road, Glasgow, D04 89GR
+
+                    <br>
+
+                    Call us now toll free: (800)2345-6789
+
+                    <br>
+
+                    Customer support: support@demolink.org
+
+                    <br>
+
+                    Skype: sample-username
+
+                </p>
+            </nav>
+        </footer>
+    </body>
+
+    <script>
+        function buscarDado() {
+            fetch("http://localhost:5000/api/Filmes")
+                .then(response => {
+                    if (!response.ok) {
+                        throw Error("ERRO!");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    const html = data.map(Filmes => {
+                        return `<div class="card-filme">
+                        <p>${Filmes.titulo}</p>
+                        <p>${Filmes.idGeneroNavigation.nome}</p>
+                    </div>`
+                    })
+                    document
+                        .querySelector('#titulos-e-generos')
+                        .insertAdjacentHTML('afterbegin', html)
+                })
+                .catch(error => {
+                    console.log(error)
+                });
+        }
+    </script>
+
+</html>
